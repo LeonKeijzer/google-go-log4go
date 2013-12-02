@@ -238,7 +238,7 @@ func print(level int, message string) {
 		//
 		if displayTime == 0 || displayTime == 2 {
 			now := time.Now()
-			formatDate := now.Format("2006/01/02 15:04")
+			formatDate := now.Format("2006/01/02 15:04:05")
 			if UseColor() {
 				color_string := getColor(level)
 				color.Printf(color_string+"[%s] %s\n", formatDate, message)
