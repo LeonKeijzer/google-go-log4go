@@ -260,7 +260,6 @@ func print(level int, message string) {
 		//
 		if (displayTime == 0 || displayTime == 2) {
 			now := time.Now()
-			// elapsed := now.Sub(startTime)
 			if (UseColor()) {
 				color_string := getColor(level)
 				color.Printf(color_string + "[%s] %s\n", now, message)
