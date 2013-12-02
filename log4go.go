@@ -237,9 +237,8 @@ func print(level int, message string) {
 		// If displayTime is uninitialized, default to true
 		//
 		if displayTime == 0 || displayTime == 2 {
-			const dateLayout = "2013/12/02 10:00:02"
 			now := time.Now()
-			formatDate := now.Format(dateLayout)
+			formatDate := now.Format("RFC822Z")
 			if UseColor() {
 				color_string := getColor(level)
 				color.Printf(color_string+"[%s] %s\n", formatDate, message)
