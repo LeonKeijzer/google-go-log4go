@@ -4,6 +4,7 @@ import "fmt"
 import "strings"
 import "regexp"
 import "time"
+import "log"
 
 import "github.com/wsxiaoys/terminal/color"
 
@@ -203,6 +204,20 @@ func Trace(message string) {
  */
 func Tracef(message string, v ...interface{}) {
 	printf(TraceLevel, "TRACE: "+message, v...)
+}
+
+/**
+ * Log fatal
+ */
+func Fatal(message string) {
+	log.Fatal(message)
+}
+
+/**
+* This and all of the other "LevelF()" functions are wrappers for Printf.
+ */
+func Fatalf(message string, v ...interface{}) {
+	log.Fatalf(message, v)
 }
 
 /**
